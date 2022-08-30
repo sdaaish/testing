@@ -1,3 +1,5 @@
+#+title: A demo website
+#+subtitle: Testing read the org
 #+SETUPFILE: ./org-html-themes/org/theme-readtheorg-local.setup
 #+HTML_HEAD: <style>pre.src{background:#303030;color=white;}</style>
 #+HTML_HEAD: <style>#content{max-width:1800px;}</style>
@@ -31,7 +33,7 @@ Function refreshenv {
 		$env:path = ($paths|Select-Object -Unique) -join ";"
 }
 #+end_src
-* sh
+** sh
 Some sh code.
 #+begin_src sh
 for i in /etc/init.d/*
@@ -39,3 +41,14 @@ do
     echo $i
 done
 #+end_src
+* Another part of it
+** Quote
+This is /italic/ with some *bold* and =code format= and ~tilde format~
+#+begin_quote
+Some die young.
+#+end_quote
+** Example
+For referens
+#+begin_example
+Some text in example format.
+#+end_example
