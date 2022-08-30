@@ -31,3 +31,11 @@ Function refreshenv {
 		$env:path = ($paths|Select-Object -Unique) -join ";"
 }
 #+end_src
+* sh
+Some sh code.
+#+begin_src sh
+for i in /etc/init.d/*
+do
+    echo $i
+done
+#+end_src
