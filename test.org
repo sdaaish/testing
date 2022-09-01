@@ -1,0 +1,56 @@
+#+title: A demo website
+#+subtitle: Testing read the org
+#+SETUPFILE: ./org-html-themes/org/theme-readtheorg-local.setup
+#+HTML_HEAD: <style>pre.src{background:#303030;color=white;}</style>
+#+HTML_HEAD: <style>#content{max-width:1800px;}</style>
+#+HTML_HEAD: <style>p{max-width:800px;}</style>
+#+HTML_HEAD: <style>li{max-width:800px;}</style>
+#+options: author:nil date:nil timestamp:nil
+* Start
+** Subtitle
+Some scripts
+#+begin_src emacs-lisp
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessag
+#+end_src
+** Powershell
+And another script
+#+begin_src powershell
+Function refreshenv {
+		$paths = @(
+				([System.Environment]::GetEnvironmentVariable("Path","Machine") -split ";")
+				([System.Environment]::GetEnvironmentVariable("Path","User") -split ";")
+		)
+		$env:path = ($paths|Select-Object -Unique) -join ";"
+}
+#+end_src
+** sh
+Some sh code.
+#+begin_src sh
+for i in /etc/init.d/*
+do
+    echo $i
+done
+#+end_src
+* Another part of it
+** Quote
+This is /italic/ with some *bold* and =code format= and ~tilde format~
+#+begin_quote
+Some die young.
+#+end_quote
+** Example
+For referens
+#+begin_example
+Some text in example format.
+Another line.
+#+end_example

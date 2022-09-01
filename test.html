@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A demo website</title>
+<meta name="generator" content="Org Mode" />
+<style>pre.src{background:#303030;color=white;}</style>
+<style>#content{max-width:1800px;}</style>
+<style>p{max-width:800px;}</style>
+<style>li{max-width:800px;}</style>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">A demo website
+<br />
+<span class="subtitle">Testing read the org</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgff9f74c">1. Start</a>
+<ul>
+<li><a href="#org7af9fa1">1.1. Subtitle</a></li>
+<li><a href="#org670dde3">1.2. Powershell</a></li>
+<li><a href="#org3fa6a30">1.3. sh</a></li>
+</ul>
+</li>
+<li><a href="#org1114455">2. Another part of it</a>
+<ul>
+<li><a href="#org7badecd">2.1. Quote</a></li>
+<li><a href="#orga049204">2.2. Example</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgff9f74c" class="outline-2">
+<h2 id="orgff9f74c"><span class="section-number-2">1.</span> Start</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org7af9fa1" class="outline-3">
+<h3 id="org7af9fa1"><span class="section-number-3">1.1.</span> Subtitle</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Some scripts
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defvar</span> <span style="font-weight: bold; font-style: italic;">bootstrap-version</span>)
+(<span style="font-weight: bold;">let</span> ((bootstrap-file
+       (expand-file-name <span style="font-style: italic;">"straight/repos/straight.el/bootstrap.el"</span> user-emacs-directory))
+      (bootstrap-version 5))
+  (<span style="font-weight: bold;">unless</span> (file-exists-p bootstrap-file)
+    (<span style="font-weight: bold;">with-current-buffer</span>
+        (url-retrieve-synchronously
+         <span style="font-style: italic;">"https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"</span>
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessag
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org670dde3" class="outline-3">
+<h3 id="org670dde3"><span class="section-number-3">1.2.</span> Powershell</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+And another script
+</p>
+<div class="org-src-container">
+<pre class="src src-powershell">Function refreshenv {
+		$paths = @(
+				([System.Environment]::GetEnvironmentVariable("Path","Machine") -split ";")
+				([System.Environment]::GetEnvironmentVariable("Path","User") -split ";")
+		)
+		$env:path = ($paths|Select-Object -Unique) -join ";"
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3fa6a30" class="outline-3">
+<h3 id="org3fa6a30"><span class="section-number-3">1.3.</span> sh</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Some sh code.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold;">for</span> i<span style="font-weight: bold;"> in</span> /etc/init.d/*
+<span style="font-weight: bold;">do</span>
+    <span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">i</span>
+<span style="font-weight: bold;">done</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1114455" class="outline-2">
+<h2 id="org1114455"><span class="section-number-2">2.</span> Another part of it</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7badecd" class="outline-3">
+<h3 id="org7badecd"><span class="section-number-3">2.1.</span> Quote</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+This is <i>italic</i> with some <b>bold</b> and <code>code format</code> and <code>tilde format</code>
+</p>
+<blockquote>
+<p>
+Some die young.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orga049204" class="outline-3">
+<h3 id="orga049204"><span class="section-number-3">2.2.</span> Example</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+For referens
+</p>
+<pre class="example" id="orgbad6299">
+Some text in example format.
+Another line.
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
