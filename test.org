@@ -49,7 +49,7 @@ This is /italic/ with some *bold* and =code format= and ~tilde format~
 Some die young.
 #+end_quote
 ** Example
-For referens
+For reference.
 #+begin_example
 Some text in example format.
 Another line.
