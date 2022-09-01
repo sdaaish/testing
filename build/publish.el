@@ -31,7 +31,7 @@
 (require 'ox-publish)
 (setq org-export-html-validation-link nil)
 (setq org-html-inline-images t)
-(setq org-html-head-include-scripts nil)
+(setq org-html-head-include-scripts t)
 
 ;; Publish org-files
 (setq org-publish-project-alist
@@ -43,7 +43,7 @@
          :recursive nil
          :html-link-home "/"
          :html-head-include-default-style nil
-         :html-head-include-scripts nil
+         :html-head-include-scripts t
          )))
 (org-publish-project "testing")
 (kill-emacs)
