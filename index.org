@@ -1,0 +1,5 @@
+#+title: Testing
+#+subtitle: Redirecting to html site...
+#+html_head: <meta http-equiv="refresh" content="0; URL=https://blog.charlottendal.net/testing/test.html">
+#+html_head: <link rel="canonical" href="https://blog.charlottendal.net/testing/test.html"></html>
+[[https://blog.charlottendal.net/testing/test.html][Redirecting to html site]]
