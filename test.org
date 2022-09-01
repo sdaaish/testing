@@ -52,4 +52,5 @@ Some die young.
 For referens
 #+begin_example
 Some text in example format.
+Another line.
 #+end_example
